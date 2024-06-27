@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("colorView", func(w *unison.Window) {
-		colorView.New().Layout(w.Content())
+		w.Content().AddChild(colorView.New().Layout())
 	})
 }
